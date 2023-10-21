@@ -11,3 +11,5 @@
 
 
 - El formulario para buscar post en la base de datos tambien lo pueden ver en el navbar a un lado derecho en el search.
+
+- Deben instalar Bootstrap 5 para utilizar ese proyecto.
