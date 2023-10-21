@@ -1,0 +1,29 @@
+{% extends 'master.html' %} {% load static %}
+{% block title %}- Create Post{% endblock %}
+
+{% block content %}
+    <div class="container p-4">
+    <h1 class="display-3 mb-5">Create Post</h1>
+        <form action="{% url 'insertPost' %}" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Title</label>
+                <input type="text" class="form-control" name="name" maxlength="72">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Sub Title</label>
+                <input type="text" class="form-control" name="subtitle" maxlength="200">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Body</label>
+                <textarea name="body" class="form-control" rows="10" maxlength="1000"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Image URL</label>
+                <input type="url" class="form-control" name="image" maxlength="200">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+{% endblock %}

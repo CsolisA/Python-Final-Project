@@ -1,0 +1,12 @@
+{% extends 'master.html' %} {% load static %}
+{% block title %}- Create Avatar{% endblock %}
+
+{% block content %}
+    <div class="container p-4">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ myForm.as_p }}
+            <button type="submit" class="btn btn-dark">Send Form</button>
+        </form>
+    </div>
+{% endblock %}
